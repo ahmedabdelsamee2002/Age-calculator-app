@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
 
-		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-		
-		<title>Frontend Mentor | Age calculator app</title>
-		<link rel="stylesheet" href="style.css">
+  <style>
+   .attribution { font-size: 11px; text-align: center; }
+   .attribution a { color: hsl(228, 45%, 44%); }
+   .form-error { display: none; color: red; font-size: 12px; }
+   .error-input { border-color: red; }
+   .error-label { color: red; }
+  </style>
+ </head>
+ <body>
+  <main class="principal">
+   <div class="container">
+    <h1 style="position:absolute;top:-200px;">Age Calculator App Main</h1>
+    
+    <form class="form">
+     <div class="form-container">
+     
+      <div class="form-item">
+       <label for="day" class="form-item__label label-day">Day</label>
+       <input type="text" class="form-item__input" name="day" required maxlength="2" id="day" placeholder="DD">
+       <p class="form-error error-day"><i>Must be a valid day</i></p>
+      </div>
+      
+      <div class="form-item">
+       <label for="month" class="form-item__label label-month">Month</label>
+       <input type="text" class="form-item__input" name="month" required maxlength="2" id="month" placeholder="MM">
+       <p class="form-error error-month"><i>Must be a valid month</i></p>
+      </div>
+      
+      <div class="form-item">
+       <label for="year" class="form-item__label label-year">Year</label>
+       <input type="text" class="form-item__input" name="year" required maxlength="4" id="year" placeholder="YYYY">
+       <p class="form-error error-year"><i>Must be a valid year</i></p>
+      </div>
+     </div>
+     <button type="submit" class="form-button btn-submit">
+      <img src="assets/images/icon-arrow.svg" class="form-button__icon" alt="">
+     </button>
+    </form>
+    
+    <div class="result">
+     <p class="result-text"><span class="result-text__data years">--</span> years</p>
+     <p class="result-text"><span class="result-text__data months">--</span> months</p>
+     <p class="result-text"><span class="result-text__data days">--</span> days</p>
+    </div>
+   </div>
+  </main>
 
-		<style>
-			.attribution { font-size: 11px; text-align: center; }
-			.attribution a { color: hsl(228, 45%, 44%); }
-		</style>
-	</head>
-	<body>
-		<main class="principal">
-			<div class="container">
-				<h1 style="position:absolute;top:-200px;">Age Calculator App Main</h1>
-				
-				<form class="form">
-					<div class="form-container">
-					
-						<div class="form-item">
-							<label for="day" class="form-item__label">Day</label>
-							<input type="text" class="form-item__input" name="day" required maxlength="2" id="day" placeholder="DD">
-							<p class="form-error-day"><i>Must be a valid date</i></p>
-						</div>
-						
-						<div class="form-item">
-							<label for="month" class="form-item__label">Month</label>
-							<input type="text" class="form-item__input" name="month" required maxlength="2" id="month" placeholder="MM">
-							<p class="form-error-month"><i>Must be a valid date</i></p>
-						</div>
-						
-						<div class="form-item">
-							<label for="year" class="form-item__label">Year</label>
-							<input type="text" class="form-item__input" name="year" required maxlength="4" id="year" placeholder="YYYY">
-							<p class="form-error-year"><i>Must be a valid date</i></p>
-						</div>
-					</div>
-					<button type="button" class="form-button">
-						<img src="assets/images/icon-arrow.svg" class="form-button__icon" alt="">
-					</button>
-				</form>
-				
-				<div class="result">
-					<p class="result-text" id="yrs"><span class="result-text__data">--</span> years</p>
-					<p class="result-text" id="mth"><span class="result-text__data">--</span> months</p>
-					<p class="result-text" id="day"><span class="result-text__data">--</span> days</p>
-				</div>
-			</div>
-		</main>
-
-		<footer class="attribution">
-			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-			Coded by <a href="#">Ahmed Abdelsamee</a>.
-		</footer>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-		<script src="script.js"></script>
-	</body>
+  <footer class="attribution">
+   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+   Coded by <a href="#">Ahmed Abdelsamee</a>.
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+ </body>
 </html>
