@@ -105,6 +105,13 @@ function getMonthDays(month, year) {
 // Validates if the day number is between 1 and the number of days in the given month
 function validDay(input) {
     let day = parseInput(input);
+
+    // Check if input is a valid number
+    if (isNaN(day)) {
+	showErrorMsg(input, "Must be a valid number");
+	return false;
+    }
+	
     let monthValue = parseInput(month);
     let yearValue = parseInput(year);
 
@@ -118,6 +125,12 @@ function validDay(input) {
 // Validates if the month number is between 1 and 12
 function validMonth(input) {
     let monthValue = parseInput(input);
+
+    // Check if input is a valid number
+    if (isNaN(monthValue)) {
+	showErrorMsg(input, "Must be a valid number");
+	return false;
+    }
 
     if (monthValue < 1 || monthValue > 12) {
         showErrorMsg(input, "Must be a valid month");
